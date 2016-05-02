@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <title>米讯</title>
+    
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../style/index.css">
+    <link rel="stylesheet" type="text/css" href="../style/mass.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+      <div id = "mask"></div>
+      <div id = "user-id" style = "display:none">1111</div>
+      <div id = "wrap" class = "container-fluid">
+        <div class = "container-fluid" id = "header">
+          <nav class="navbar container navbar-defined" role="navigation">
+            <div class = "navbar-header container">
+              <div class = "navbar-brand">
+                <a class="navbar-brand brand"  href="#" id="logo">
+                  <img src="../img/logo.png" class = "img-logo">
+                  <h3 >米讯平台管理系统</h3>
+                  <span class="label label-default label-defined">BETA
+                  </span>
+                </a>
+              </div>
+              <div class = "customer-info">
+                <img src="../img/demo.png" class = "customer-img">
+                <div class = "type">
+                  <a href="#" class = "type-name label">服务号</a>
+                  <a href="#" class = "type-verify label">未认证</a>
+                </div>
+                <a href="" class = "customer-name label">疯掉了丰厚的开</a>
+                <a href="#" class = "info-inbox">
+                  <i class = "icon-inbox"></i>
+                  <i class = "icon-notices"></i>
+                </a>
+                <div class = "exit-box">
+                  <span>|</span>
+                  <a href="#" class = "btn btn-exit">退出</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class = " container main-defined" id ="main">
+          <div id = "select-img">
+            <div class = "dialog-head">
+              <span>选择图片</span>
+              <span class = "btn-exit">×</span>
+            </div>
+            <div class = "dialog-body">
+              <div class = "inner-side">
+                <div class = "groud-list">
+                  <div class = "inner-menu-box">
+                    <dl class = "inner-menu">
+                    </dl>
+                  </div>
+                  <!-- 分组表单，目前功能还未接入-->
+                </div>
+              </div>
+              <div class = "inner-main">
+                <div class = "local-select">
+                  <span class ="select-info">大小: 不超过2M, 格式: bmp, png, jpeg, jpg, gif</span>
+                  <i class = "triangle out">
+                    <em class = "triangle in"></em>
+                  </i>
+                  <span  class = "upload-btn">本地上传</span>
+                  <form id = "submit-img" method = "POST"  name = "date-img" action = "../../form" enctype="multipart/form-data" style = "display:none">
+                    <input type = "file" name = "myfiles" id = "upload-file" onchange="fileChange()"></input >
+                    <input type = "text" name= "userId" id = "userId"></input>
+                    <input type = "text" name = "groupId" id = "groupId"></input>
+                  </form>     
+                </div>
+                <div class = "select-img-box">
+                </div>
+                <div class = "page page-lefe">
+                  <span class = "page-num">
+                    <span class = "face-page"></span>
+                    <span class = "num-gap">/</span>
+                    <span class = "num-page"></span>
+                  </span>
+                  <a href="javascript:void(0)" class = "btn btn-next">
+                    <i class = "arrow"></i>
+                  </a>
+                  <span class = "goto-area">
+                    <input type = "text" class = "num-change" value = "">
+                    <a href="javascript:void(0)" class = "btn page-go">跳转</a>
+                  </span>
+                </div>
+                <div class = "page page-center">
+                  <a href="javascript:void(0)" class = "btn btn-pre">
+                    <i class = "arrow"></i>
+                  </a>
+                  <span class = "page-num">
+                    <span class = "face-page"></span>
+                    <span class = "num-gap">/</span>
+                    <span class = "num-page"></span>
+                  </span>
+                  <a href="javascript:void(0)" class = "btn btn-next">
+                    <i class = "arrow"></i>
+                  </a>
+                  <span class = "goto-area">
+                    <input type = "text" class = "num-change">
+                    <a href="#" class = "btn page-go">跳转</a>
+                  </span>
+                </div>
+                <div class = "page page-right">
+                   <a href="javascript:void(0)" class = "btn btn-pre">
+                    <i class = "arrow"></i>
+                  </a>
+                  <span class = "page-num">
+                    <span class = "face-page"></span>
+                    <span class = "num-gap">/</span>
+                    <span class = "num-page"></span>
+                  </span>
+                  <span class = "goto-area">
+                    <input type = "text" class = "num-change">
+                    <a href="#" class = "btn page-go">跳转</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class = "dialog-foot">
+              <span class = "dialog-foot-exp">
+                已选<span class = "select-number">0</span>个,可选<span class = "select-num">1</span>个
+              </span>
+              <span class = "certain-btn btn" disabled = "disabled">确定</span>
+              <span class = "cancel-btn btn">取消</span>
+            </div>
+          </div>
+          <div class ="col-md-2 clearfix" id ="nav_tab">
+            <ul class = "nav nav-stacked nav-pills" role = "tablist">
+              <li role = "presentation">
+                <i class="glyphicon glyphicon-th-large" ></i><span>功能</span>
+              </li>
+              <li role = "presentation" class = "active">
+                <a href="#">群发消息</a> 
+              </li>
+              <li role = "presentation">
+                <a href="#">自动回复</a>
+              </li>
+              <li role = "presentation">
+                <a href="#">自定义菜单</a>
+              </li>
+            </ul>
+            <ul class = "nav nav-stacked nav-pills" role = "tablist">
+              <li role = "presentation">
+                <i class="glyphicon glyphicon-book" style = "margin:10px;" ></i><span>管理</span>
+              </li>
+              <li role = "presentation">
+                <a href="#">消息管理</a> 
+              </li>
+              <li role = "presentation">
+                <a href="#">用户管理</a>
+              </li>
+              <li role = "presentation">
+                <a href="source.html">素材管理</a>
+              </li>
+            </ul>
+          </div> 
+          <div class ="col-md-10" id = "temp">
+            <div id = "mass">
+              <div class = "mass-head">
+                <h4>群发功能</h4>
+              </div>
+              <ul class = "mass-menu" >
+                <li class = "active mass-news">
+                  <a href="#" >新建群发信息</a>
+                </li>
+                <li class = "mass-already no-active">
+                  <a href="#">已发送</a>
+                </li>
+              </ul>
+              <div class = "mass-danger">
+                <p>
+                  "为保障用户体验，微信公众平台严禁恶意营销以及诱导分享朋友圈，严禁发布色情低俗、暴力血腥、政治谣言等各类违反法律法规及相关政策规定的信息。一旦发现，我们将严厉打击和处理。""        
+                </p>
+              </div>
+              <div class = "mass-edit">
+                <div class = "mass-select">
+                  <div class = "select-target select-box">
+                    <label>群发对象</label>
+                    <select>
+                      <option>全部用户</option>
+                      <option>按分组选择</option>
+                    </select>
+                  </div>
+                  <div class = "select-sex select-box">
+                    <label>性别</label>
+                    <select>
+                      <option>全部</option>
+                      <option>男</option>
+                      <option>女</option>
+                    </select>
+                  </div>
+                  <div class = "select-place select-box">
+                    <label>选择省份</label>
+                    <select   id="province"   onChange = "select()"></select>
+                  </div>
+                  <div class = "select-city select-box">
+                    <label>选择城市</label>
+                    <select   id="city"   onChange   =   "select()"></select>
+                  </div>
+                </div>
+                <div class = "edit-box">
+                  <ul class = "edit-icon-box ">
+                    <li class = "edit-icon edit-text edit-active">
+                      <div class = "info-box text-info">
+                        <span class = "point">文字</span>
+                        <span class = "triangle"></span>
+                      </div>
+                      <i></i>
+                    </li>
+                    <li class = "edit-icon edit-pic">
+                      <div class = "info-box pic-info">
+                        <span class = " point">图片</span>
+                        <span class = "triangle"></span>
+                      </div>
+                      <i></i>
+                    </li>
+                  </ul>
+                  <div class = "edit-area text-area" contentEditable = "true"></div> 
+    
+                  <div class = "edit-area pic-area"  style = "display:none"></div> 
+
+                  <div class = "expression">
+                    <div class = "expression-box" id = "expressionBox"></div>
+                    <div class = "preview-box">
+                      <img src="" class = "pre-img">
+                    </div>
+                    <span class = "face-icon">
+                    </span>
+                    <span class = "print-info">你还可以输入<em class = "text-num">600</em>字</span>
+                  </div>
+                </div>
+
+                <div class = "submit-box">
+                  <div class ="submit-bnt">
+                    <span>群发</span>
+                  </div>
+                  <div class ="tips">
+                    <span class ="tips-info">你本月还可以发4条信息</span>
+                    <i class = "triangle out">
+                      <em class = "triangle in"></em>
+                    </i>
+                  </div>
+                </div>
+              </div>
+
+              <div class = "send-history">
+                <div class = "mass-item" id = "1">
+                  <div class = "mass-content">
+                    <div class = "title-info">
+                      <span class = "icon"></span>
+                      <span class = "title">
+                        [文字]感谢使用EAS开发部助理，如有建议，
+                        编写：建议+建议内容 发送即可。
+                      </span>
+                    </div>
+                    <div class = "table-cell send-tips"></div>
+                    <div class = "table-cell send-data"></div>
+                    <div class = "table-cell delete-send"></div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+        <div class = "row" id ="footer"></div>
+      </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.form.js"></script>
+    <script type="text/javascript" src = "../script/selectPlace.js"></script>
+    <script type="text/javascript" src = "../script/mass.js"></script>
+    <script type="text/javascript" src = "../script/dialogPic.js"></script>
+    <script type="text/javascript" src = "../script/dialogUserMessages.js"></script>
+  </body>
+</html>

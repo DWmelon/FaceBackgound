@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <title>米讯</title>
+    
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../style/index.css">
+    <link rel="stylesheet" type="text/css" href="../style/oneImg.css">
+    <link rel="stylesheet" type="text/css" href="../style/tool.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+      <div id = "wrap" class = "container-fluid">
+        <div class = "container-fluid" id = "header">
+          <nav class="navbar container navbar-defined" role="navigation">
+            <div class = "navbar-header container">
+              <div class = "navbar-brand">
+                <a class="navbar-brand brand"  href="#" id="logo">
+                  <img src="../img/logo.png" class = "img-logo">
+                  <h3 >米讯平台管理系统</h3>
+                  <span class="label label-default label-defined">BETA
+                  </span>
+                </a>
+              </div>
+              <div class = "customer-info">
+                <img src="../img/demo.png" class = "customer-img">
+                <div class = "type">
+                  <a href="#" class = "type-name label">服务号</a>
+                  <a href="#" class = "type-verify label">未认证</a>
+                </div>
+                <a href="" class = "customer-name label">疯掉了丰厚的开</a>
+                <a href="#" class = "info-inbox">
+                  <i class = "icon-inbox"></i>
+                  <i class = "icon-notices"></i>
+                </a>
+                <div class = "exit-box">
+                  <span>|</span>
+                  <a href="#" class = "btn btn-exit">退出</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class = " container main-defined" id ="main">
+         
+          <div class ="col-md-2 clearfix" id ="nav_tab">
+            <ul class = "nav nav-stacked nav-pills" role = "tablist">
+              <li role = "presentation">
+                <i class="glyphicon glyphicon-th-large" ></i><span>功能</span>
+              </li>
+              <li role = "presentation" >
+                <a href="index.html">群发消息</a> 
+              </li>
+              <li role = "presentation">
+                <a href="#">自动回复</a>
+              </li>
+              <li role = "presentation">
+                <a href="#">自定义菜单</a>
+              </li>
+            </ul>
+            <ul class = "nav nav-stacked nav-pills" role = "tablist">
+              <li role = "presentation">
+                <i class="glyphicon glyphicon-book" style = "margin:10px;" ></i><span>管理</span>
+              </li>
+              <li role = "presentation">
+                <a href="#">消息管理</a> 
+              </li>
+              <li role = "presentation">
+                <a href="#">用户管理</a>
+              </li>
+              <li role = "presentation" class = "active">
+                <a href="source.html">素材管理</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-main col-md-10">
+        <div id="main-title">
+          <h4 class="title">素材管理</h4>
+          <ul class="title-nav nav nav-pills">
+            <li class="active">
+              <a href="source.html">图文消息</a>
+            </li>
+            <li>
+              <a href="imgDeposityGroup.html">图片库</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-nav">
+          <ul class="breadcrumb">
+            <li>
+              <a class="back glyphicon glyphicon-circle-arrow-left" href="index.html"></a>
+              <a href="source.html">图文消息</a>
+            </li>
+            <li>
+              新建图文消息
+              <span class="divider"></span>
+            </li>
+          </ul>
+        </div>
+        <div id="main-content" class="row">
+          <!--预览编辑部分的一部分内容，例如标题，图片等等-->
+          <div id="detail-info" class="col-md-4">
+            <div class="show-img">
+              <p class="article-title">
+                <a href="javascript:void(0)">标题</a>
+              </p>
+              <div class="img-box">
+                <img src="" alt="">
+                <div class="cover-word">封面图片</div>
+                <p class="show-summary"></p>
+              </div>
+            </div>
+          </div>
+          <!--编辑单图文消息-->
+          <div id="edit-area" class="col-md-7">
+            <span class="out-triangle"></span>
+            <span class="triangle"></span>
+            <div class="edit-form form">
+              <form role="form">
+                <div class="form-group">
+                  <label>标题
+                    <span class="input-tip">（字数不超过64个字）</span>
+                    <span class="count-word">0/64</span>
+                  </label>
+                  <input id="editTitle" type="text" class="form-control">
+                  <p class="fail title-limit">标题不能为空且长度不能超过64字</p>
+                </div>
+                <div class="form-group">
+                  <label>作者
+                    <span class="input-tip">（作者选填）</span>
+                    <span class="count-word">0/8</span>
+                  </label>
+                  <input id="editAuthor" type="text" class="form-control">
+                  <p class="fail author-limit">作者不能超过8个字</p>
+                </div>
+                <div class="form-group">
+                  <label>
+                    封面
+                    <span class="input-tip">（大图片建议尺寸：900像素 * 500像素）
+                    </span>
+                  </label>
+                </div>
+                <div class="form-group form-inline">
+                  <span id="upload-from-local" class="btn btn-default" onclick="return false;">上传图片</span>
+                  <button class="btn btn-default img-from-deposi" onclick="return false;">  从图片库选择
+                  </button>
+                  <p class="fail img-limit">必须插入一张图片</p>
+                </div>
+                <div class="up-load-img">
+                  <img src="../img/logo.png" alt="">
+                  <a class='del-upload-img' href="javascript:void(0);">删除</a>
+                </div>
+                <div class="form-group form-inline">
+                  <input id="cover-img" type="checkbox" checked="true">
+                  <label for="cover-img">
+                    <span class="input-tip">封面图片显示在正文中</span>
+                  </label>
+                </div>
+              </form>
+            </div>
+            <form id = "upload-local" method = "POST"  name = "date-img" action = "../../form"enctype="multipart/form-data" style = "display:none">
+              <input type = "file" name = "myfiles" id = "upload-local-file" onchange="fileChangeLocal()">
+              <input type = "text" name= "userId" id = "local-userId" value='1111' >
+              <input type = "text" name = "groupId" id = "local-groupId" value='1' >
+            </form> 
+            <div class="add-summary">
+              <label href="javascript:void(0);">摘要
+                <span class="input-tip">（选填）</span>
+                <span class="count-word">0/120</span>
+              </label>
+              <textarea></textarea>
+              <p class="fail summary-limit">摘要长度不能超过120字</p>
+            </div>
+            <div class="main-article">
+              <p class="title">正文</p>
+              <p class="fail main-article-limit">正文不能为空且长度不能超过10000字</p>
+              <script id="editor" type="text/plain" style="width:100%;height:300px;"></script>
+            </div>
+          </div>
+        </div>
+        <!--保存或者预览-->
+        <div class="tool-area row">
+          <button id="save" class="btn btn-primary col-md-offset-5">保存</button>
+          <button id="preview" class="btn btn-default">预览</button>
+        </div>
+      </div>
+        </div>
+        <div class = "row" id ="footer"></div>
+      </div>
+
+      <!--点击‘从图库上传图片’ 部分的html-->
+      <div id = "mask"></div>
+      <div id = "select-img">
+            <div class  = "dialog-head">
+              <span>选择图片</span>
+              <span class = "btn-exit">×</span>
+            </div>
+            <div class = "dialog-body">
+              <div class = "inner-side">
+                <div class = "groud-list">
+                  <div class = "inner-menu-box">
+                    <dl class = "inner-menu">
+                    </dl>
+                  </div>
+                  <!-- 分组表单，目前功能还未接入-->
+                </div>
+              </div>
+              <div class = "inner-main">
+                <div class = "local-select">
+                  <span class ="select-info">大小: 不超过2M, 格式: bmp, png, jpeg, jpg, gif</span>
+                  <i class = "triangle out">
+                    <em class = "triangle in"></em>
+                  </i>
+                  <span  class = "upload-btn">本地上传</span>
+                  <form id = "submit-img" method = "POST"  name = "date-img" action = "../../form" enctype="multipart/form-data" style = "display:none">
+                    <input type = "file" name = "myfiles" id = "upload-file" onchange="fileChange()">
+                    <input type = "text" name= "userId" id = "userId">
+                    <input type = "text" name = "groupId" id = "groupId">
+                  </form>
+                </div>
+                <div class = "select-img-box">
+                </div>
+                <div class = "page page-lefe">
+                  <span class = "page-num">
+                    <span class = "face-page"></span>
+                    <span class = "num-gap">/</span>
+                    <span class = "num-page"></span>
+                  </span>
+                  <a href="javascript:void(0)" class = "btn btn-next">
+                    <i class = "arrow"></i>
+                  </a>
+                  <span class = "goto-area">
+                    <input type = "text" class = "num-change" value = "">
+                    <a href="javascript:void(0)" class = "btn page-go">跳转</a>
+                  </span>
+                </div>
+                <div class = "page page-center">
+                  <a href="javascript:void(0)" class = "btn btn-pre">
+                    <i class = "arrow"></i>
+                  </a>
+                  <span class = "page-num">
+                    <span class = "face-page"></span>
+                    <span class = "num-gap">/</span>
+                    <span class = "num-page"></span>
+                  </span>
+                  <a href="javascript:void(0)" class = "btn btn-next">
+                    <i class = "arrow"></i>
+                  </a>
+                  <span class = "goto-area">
+                    <input type = "text" class = "num-change">
+                    <a href="#" class = "btn page-go">跳转</a>
+                  </span>
+                </div>
+                <div class = "page page-right">
+                   <a href="javascript:void(0)" class = "btn btn-pre">
+                    <i class = "arrow"></i>
+                  </a>
+                  <span class = "page-num">
+                    <span class = "face-page"></span>
+                    <span class = "num-gap">/</span>
+                    <span class = "num-page"></span>
+                  </span>
+                  <span class = "goto-area">
+                    <input type = "text" class = "num-change">
+                    <a href="#" class = "btn page-go">跳转</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class = "dialog-foot">
+              <span class = "dialog-foot-exp">
+                已选<span class = "select-number">0</span>个,可选<span class = "select-num">1</span>个
+              </span>
+              <span class = "certain-btn btn" disabled = "disabled">确定</span>
+              <span class = "cancel-btn btn">取消</span>
+            </div>
+      </div>
+      <!--显示加载中start-->
+      <div id="loading-wrap">
+      </div>
+      <div id="loading-img">
+      </div>
+      <p id="loading-tip">正在拼了命的为您加载...</p>
+      <!--显示加载中end  -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" charset="utf-8" src="../js/editor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../js/editor/ueditor.all.min.js"></script>
+    
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../script/oneImg.js"></script>
+  <!--弹出图片库的弹出框-->
+  <script src = "../script/oneImg_uploadImg.js"></script>
+  <script src = "../js/jquery.form.js"></script>
+  <script src="../script/handleMessage.js"></script>
+  <script src="../script/oneImg_getEditData.js"></script>
+  <script src="../script/tipUtil.js"></script>
+  <!--传送array参数的插件-->
+  <script type="text/javascript" src = "../js/arrayToJSON.js"></script>
+  <script src="../script/tool/imgFromDeposi.js"></script>
+  <script>
+    var ue = UE.getEditor('editor');
+  </script>
+  </body>
+</html>

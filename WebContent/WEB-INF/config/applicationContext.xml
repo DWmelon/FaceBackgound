@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:task="http://www.springframework.org/schema/task"
+
+	xsi:schemaLocation="   
+          http://www.springframework.org/schema/beans   
+          http://www.springframework.org/schema/beans/spring-beans-4.0.xsd   
+          http://www.springframework.org/schema/tx   
+          http://www.springframework.org/schema/tx/spring-tx-4.0.xsd  
+          http://www.springframework.org/schema/context   
+          http://www.springframework.org/schema/context/spring-context-4.0.xsd   
+          http://www.springframework.org/schema/aop   
+          http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+          http://www.springframework.org/schema/task 
+		  http://www.springframework.org/schema/task/spring-task-4.0.xsd"
+
+
+	default-autowire="byName">
+
+	<context:property-placeholder location="/WEB-INF/config/database.properties" />
+	
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"  destroy-method="close" lazy-init="false">
+		<property name="driverClassName" value="${mysqldriverclass}" />
+		<property name="url" value="${mysqljdbcurl}" />
+		<property name="username" value="${mysqluser}" />
+		<property name="password" value="${mysqlpassword}" />
+		<property name="initialSize" value="5"/>  
+	    <property name="maxActive" value="10"/>  
+	    <property name="maxWait" value="60000"/>  
+	    <property name="poolPreparedStatements" value="true"/>  
+	</bean>
+	
+
+
+	<bean name="jdbcTemelate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- 声明式事务管理 -->
+	<tx:advice id="myAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="add*" propagation="REQUIRED" />
+			<tx:method name="approve*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="del*" propagation="REQUIRED" />
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="modify*" propagation="REQUIRED" />
+			<tx:method name="reset*" propagation="REQUIRED" />
+			<tx:method name="refresh*" propagation="REQUIRED" />
+			<tx:method name="send*" propagation="REQUIRED" />
+			<tx:method name="receive*" propagation="REQUIRED" />
+		</tx:attributes>
+	</tx:advice>
+
+	<aop:config>
+		<aop:advisor
+			pointcut="execution(* com.mesclouds.service.*Service.*(..)) or
+			execution(* com.mesclouds.*.*Service.*(..))"
+			advice-ref="myAdvice" />
+	</aop:config>
+	
+	<!-- 自动扫描组件，需要把controller去掉，否则影响事务管理 -->
+	<context:component-scan base-package="com.mesclouds">
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />  
+	</context:component-scan>
+
+	<bean id="applicationContextUtils" class="com.mesclouds.utils.ApplicationContextUtils" />
+
+
+
+</beans>

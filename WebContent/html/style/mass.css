@@ -1,0 +1,307 @@
+#temp {
+  padding-left: 0px;
+  padding-right: 0px;
+  border-left: 1px solid #EDEDED;
+}
+#temp #mask {
+  display: none;
+  opacity: 0.5;
+}
+#temp #mass .mass-head {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+#temp #mass .mass-menu {
+  display: block;
+  width: 100%;
+  height: 43px;
+  border-bottom: 1px solid #EDEDED;
+  list-style: none;
+  padding: 0px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+#temp #mass .mass-menu li {
+  display: block;
+  cursor: pointer;
+  float: left;
+  line-height: 40px;
+  padding-left: 30px;
+  padding-right: 20px;
+}
+#temp #mass .mass-menu li a:hover {
+  text-decoration: none;
+  color: #333;
+}
+#temp #mass .mass-menu .active {
+  border-bottom: 3px solid #459ae9;
+}
+#temp #mass .mass-menu .no-active:hover {
+  border-bottom: 3px solid #302525;
+}
+#temp #mass .mass-danger {
+  width: 100%;
+  height: 62px;
+  font-size: 14px;
+  color: #8d8d8d;
+  padding: 9px 30px 9px 30px;
+  background-color: #EDEDED;
+}
+#temp #mass .mass-edit .mass-select {
+  margin-top: 30px;
+  width: 100%;
+  height: 62px;
+  position: relative;
+  padding-left: 30px;
+}
+#temp #mass .mass-edit .mass-select label {
+  color: #222;
+  font-weight: 400;
+}
+#temp #mass .mass-edit .mass-select select {
+  display: block;
+  height: 30px;
+  width: 100px;
+  margin-top: 5px;
+}
+#temp #mass .mass-edit .mass-select .select-box {
+  float: left;
+  margin-right: 10px;
+}
+#temp #mass .mass-edit .edit-box {
+  width: auto;
+  height: 300px;
+  border: 1px solid #EDEDED;
+  margin: 30px 30px 0px 30px;
+  position: relative;
+}
+#temp #mass .mass-edit .edit-box .edit-icon-box {
+  width: 100%;
+  height: 39px;
+  border-bottom: 1px solid #EDEDED;
+  list-style: none;
+  padding-left: 0px;
+  margin: 0px;
+}
+#temp #mass .mass-edit .edit-box .edit-icon-box li {
+  display: block;
+  float: left;
+  width: 67px;
+  height: 100%;
+  padding: 0 21px;
+  cursor: pointer;
+}
+#temp #mass .mass-edit .edit-box .edit-icon-box li i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+}
+#temp #mass .mass-edit .edit-box .edit-icon-box .edit-text i {
+  background: url(../img/nav-icons.png) 0 -30px no-repeat;
+}
+#temp #mass .mass-edit .edit-box .edit-icon-box .edit-pic i:hover {
+  background: url(../img/nav-icons.png) 0 -30px no-repeat;
+}
+#temp #mass .mass-edit .edit-box .edit-icon-box .edit-text:hover .text-info {
+  display: block;
+}
+#temp #mass .mass-edit .edit-box .edit-icon-box .edit-pic i {
+  background: url(../img/nav-icons.png) 0 -60px no-repeat;
+}
+#temp #mass .mass-edit .edit-box .edit-icon-box .edit-pic i:hover {
+  background: url(../img/nav-icons.png) 0 -90px no-repeat;
+}
+#temp #mass .mass-edit .edit-box .edit-icon-box .edit-pic:hover .pic-info {
+  display: block;
+}
+#temp #mass .mass-edit .edit-box .edit-icon-box .info-box {
+  width: 40px;
+  height: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  position: absolute;
+}
+#temp #mass .mass-edit .edit-box .edit-icon-box .text-info {
+  left: 1%;
+  top: -7%;
+  display: none;
+}
+#temp #mass .mass-edit .edit-box .edit-icon-box .pic-info {
+  left: 8.5%;
+  top: -7%;
+  display: none;
+}
+#temp #mass .mass-edit .edit-box .edit-icon-box .triangle {
+  width: 0px;
+  height: 0px;
+  border: 5px;
+  border-style: solid;
+  position: absolute;
+  border-color: #333 transparent  transparent  transparent;
+  position: absolute;
+  left: 35%;
+  top: 100%;
+}
+#temp #mass .mass-edit .edit-area {
+  width: 100%;
+  height: 216px;
+  padding: 14px 20px;
+  outline: 0;
+  font-size: 16px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#temp #mass .mass-edit .edit-area li {
+  vertical-align: middle;
+}
+#temp #mass .mass-edit .edit-area i {
+  font-style: normal;
+}
+#temp #mass .mass-edit .edit-area .selected-img {
+  width: 80px;
+  height: 80px;
+}
+#temp #mass .mass-edit .expression {
+  width: 100%;
+  height: 42px;
+  border-top: 1px solid #EDEDED;
+  padding: 12px 30px;
+  position: relative;
+}
+#temp #mass .mass-edit .expression .expression-box {
+  position: absolute;
+  display: none;
+  width: 421px;
+  height: 197px;
+  top: 100%;
+  background-color: white;
+  z-index: 1;
+  list-style: none;
+}
+#temp #mass .mass-edit .expression .expression-box .expre_items {
+  float: left;
+  display: block;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  padding: 0px;
+  border: 2px solid #e7e7eb;
+}
+#temp #mass .mass-edit .expression .expression-box .expre_items .itmes_img {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+#temp #mass .mass-edit .expression .preview-box {
+  position: absolute;
+  display: none;
+  width: 82px;
+  height: 82px;
+  border: 1px solid #e7e7eb;
+  top: 100%;
+  left: 49.4%;
+  padding: 29px;
+}
+#temp #mass .mass-edit .expression .face-icon {
+  display: inline-block;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background: url(../img/face.png) 0px 0px no-repeat;
+}
+#temp #mass .mass-edit .expression .face-icon:hover {
+  background: url(../img/face.png) 0px -30px no-repeat;
+}
+#temp #mass .mass-edit .expression .print-info {
+  float: right;
+}
+#temp #mass .mass-edit .expression .print-info em {
+  font-style: normal;
+}
+#temp #mass .mass-edit .submit-box {
+  margin-bottom: 50px;
+}
+#temp #mass .mass-edit .submit-bnt {
+  width: 106px;
+  height: 36px;
+  background-color: #459ae9;
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+#temp #mass .mass-edit .submit-bnt span {
+  color: white;
+  font-size: 16px;
+  line-height: 36px;
+}
+#temp #mass .mass-edit .submit-bnt:hover {
+  background-color: #2F8ADF;
+}
+#temp #mass .mass-edit .tips {
+  width: 179px;
+  height: 32px;
+  border: 1px solid #EDEDED;
+  text-align: center;
+  position: relative;
+  margin-left: 160px;
+  margin-top: -35px;
+  color: #8d8d8d;
+}
+#temp #mass .mass-edit .tips span {
+  line-height: 32px;
+}
+#temp #mass .mass-edit .tips .triangle {
+  width: 0px;
+  height: 0px;
+  border: 8px;
+  border-style: solid;
+  position: absolute;
+}
+#temp #mass .mass-edit .tips .out {
+  border-color: transparent #EDEDED transparent  transparent ;
+  left: -10%;
+  top: 20%;
+}
+#temp #mass .mass-edit .tips .in {
+  border-color: transparent #fff transparent  transparent ;
+  top: -8px;
+  left: -6px;
+}
+#temp #mass .send-history {
+  display: none;
+  width: 972px;
+  min-height: 600px;
+  overflow-y: auto;
+  padding-bottom: 40px;
+}
+#temp #mass .send-history .mass-item {
+  width: 972px;
+  min-height: 120px;
+  border-bottom: 1px solid #EDEDED;
+  padding: 20px 30px;
+}
+#temp #mass .send-history .mass-item .mass-content {
+  min-height: 80px;
+  width: 100%;
+}
+#temp #mass .send-history .mass-item .mass-content .title-info {
+  width: 509px;
+  min-height: 80px;
+}
+#temp #mass .send-history .mass-item .mass-content .title-info .icon {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  float: left;
+  background-color: blue;
+  margin-right: 5px;
+}
+#temp #mass .send-history .mass-item .mass-content .title-info .title {
+  width: 414px;
+  min-height: 80px;
+}

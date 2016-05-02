@@ -1,0 +1,618 @@
+@charset 'utf-8';
+/*全局样式-----start*/
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Microsoft YaHei";
+}
+.defaultA {
+  display: block;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.defaultUl {
+  list-style: none;
+}
+.row {
+  margin: 0px;
+}
+.btn-default :focus{
+  background-color:#fff;
+  outline:none;
+}
+.btn-primary :focus{
+  background-color: #3071a9;
+  border-color: #285e8e;
+}
+.btn-primary :active{
+  background-color: #3071a9;
+  border-color: #285e8e;
+}
+/*全局样式-----end*/
+#header-box {
+  width: 100%;
+  height: 60px;
+  border-top: 3px solid #458bca;
+}
+#header-box #header {
+  width: 1200px;
+  margin: 0 auto;
+}
+#header-box #header a {
+  display: inline-block;
+  float: left;
+}
+#header-box #header a img {
+  float: left;
+  width: 45px;
+  margin-top: 7.5px;
+  margin-right: 5px;
+}
+#header-box #header a h3 {
+  float: left;
+  margin: 0;
+  line-height: 60px;
+}
+#header-box #header a span {
+  float: left;
+  display: inline-block;
+  padding: 2px;
+  margin-top: 17px;
+  margin-left: 3px;
+  height: 14px;
+  line-height: 10px;
+  font-size: 8px;
+  color: #fff;
+  background-color: #d0d0d0;
+}
+#main-box {
+  width: 100%;
+  padding: 40px 0;
+  background-color: #e7e8eb;
+}
+#main {
+  margin: 0 auto;
+  width: 1200px;
+  border: 1px solid #e7e8eb;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  background-color: #fff;
+}
+/*侧边导航栏*/
+.col-side {
+  border-right: 1px solid #e7e8eb;
+  padding: 0px;
+}
+.col-side .menu {
+  list-style: none;
+}
+.col-side .menu .nav-header {
+  padding-top: 10px;
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  color: #b2b2b2;
+  border-top: 1px solid #e7e8eb;
+}
+.col-side .menu .active a {
+  border-radius: 0px;
+  color: #fff;
+}
+.col-side .menu i {
+  margin-left: 30px;
+  margin-right: 5px;
+}
+/*主体内容*/
+#main-title {
+  overflow: hidden;
+}
+#main-title h4 {
+  padding: 0;
+  margin: 0;
+  margin-left: 14px;
+  height: 75px;
+  line-height: 75px;
+  color: #222222;
+  font-size: 16px;
+}
+#main-title .title-nav {
+  border-bottom: 1px solid #458bca;
+}
+#main-bd {
+  padding: 20px 0 40px 0;
+}
+.img-panel {
+  margin: 0 20px;
+  border: 1px solid #e7e7eb;
+}
+.panel-main {
+  min-height:600px;
+  border-right: 1px solid #e7e7eb;
+}
+.panel-main-top {
+  padding: 10px 0px;
+  margin-right: -12px;
+}
+.panel-main-top .group-oper {
+  position: relative;
+  height: 34px;
+  line-height: 34px;
+}
+.panel-main-top .group-oper a {
+  overflow: hidden;
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 14px;
+  color:rgb(69,154,233);
+}
+.panel-main-top .group-oper .group-name {
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 70px;
+  overflow: hidden;
+  font-size: 14px;
+}
+.panel-main-top .group-oper .rename-group{
+  position: relative;
+  display: none;
+}
+.panel-main-top .group-oper .del-group{
+  display: none;
+}
+/*重命名分组的弹出框输入-----start*/
+.panel-main-top .group-oper .rename-group-tip{
+  position: absolute;
+  left: -7px;
+  top: 35px;
+  width:290px;
+  border:1px solid #e7e7eb;
+  border-radius: 5px;
+  background-color:#fff;
+  z-index: 10;
+}
+.panel-main-top .group-oper .rename-group-tip .inner-content{
+  padding:30px;
+}
+.panel-main-top .group-oper .rename-group-tip p{
+  margin:0px;
+  line-height: 20px;
+  color:#222222;
+}
+.panel-main-top .group-oper .rename-group-tip .ft{
+  margin-top:20px;
+}
+.panel-main-top .group-oper .rename-group-tip .out-tri{
+  position: absolute;
+  border-color: transparent transparent #e7e7eb transparent;
+  border-style: dashed dashed solid dashed;
+  border-width: 10px;
+  top: -19px;
+  left: 130px;
+  padding-right:0px;
+}
+.panel-main-top .group-oper .rename-group-tip .in-tri{
+  position: absolute;
+  border-color: transparent transparent #ffffff transparent;
+  border-style: dashed dashed solid dashed;
+  border-width: 10px;
+  top: -18px;
+  left: 130px;
+  padding-right:0px;
+}
+/*重命名分组的弹出框输入-----end*/
+
+/*删除分组弹出框输入-----start*/
+.panel-main-top .group-oper .del-group-tip{
+  position: absolute;
+  left: 65px;
+  top: 35px;
+  width:290px;
+  border:1px solid #e7e7eb;
+  border-radius: 5px;
+  background-color:#fff;
+  z-index: 10;
+}
+.panel-main-top .group-oper .del-group-tip .inner-content{
+  padding:30px;
+}
+.panel-main-top .group-oper .del-group-tip p{
+  margin:0px;
+  line-height: 20px;
+  color:#222222;
+}
+.panel-main-top .group-oper .del-group-tip .ft{
+  margin-top:20px;
+}
+.panel-main-top .group-oper .del-group-tip .out-tri{
+  position: absolute;
+  border-color: transparent transparent #e7e7eb transparent;
+  border-style: dashed dashed solid dashed;
+  border-width: 10px;
+  top: -19px;
+  left: 130px;
+  padding-right:0px;
+}
+.panel-main-top .group-oper .del-group-tip .in-tri{
+  position: absolute;
+  border-color: transparent transparent #ffffff transparent;
+  border-style: dashed dashed solid dashed;
+  border-width: 10px;
+  top: -18px;
+  left: 130px;
+  padding-right:0px;
+}
+/*删除分组弹出框输入-----end*/
+
+/*上传提示部分-----start*/
+.panel-main-top .upload-tip {
+  position: relative;
+  height: 34px;
+  line-height: 34px;
+  border: 1px solid #e7e7eb;
+}
+.upload-tip .out-tri {
+  position: absolute;
+  border-color: transparent transparent transparent #e7e7eb;
+  border-style: dashed dashed dashed solid;
+  border-width: 6px;
+  top: 9px;
+  right: -13px;
+}
+.upload-tip .in-tri {
+  position: absolute;
+  border-color: transparent transparent transparent #ffffff;
+  border-style: dashed dashed dashed solid;
+  border-width: 6px;
+  top: 9px;
+  right: -12px;
+}
+.panel-main-top .upload-img {
+  width: 100%;
+}
+/*上传提示部分-----end*/
+.divi-group {
+  padding: 10px 15px;
+  margin: 0 -15px;
+  background-color: #f4f5f9;
+}
+.divi-group .select-all-box {
+  height: 30px;
+  line-height: 30px;
+}
+.divi-group .select-all-box label {
+  font-weight: normal;
+  font-size: 14px;
+  cursor: pointer;
+}
+/*对图片进行批量操作-----start*/
+.divi-group .img-oper{
+  position: relative;
+}
+.divi-group .img-oper button {
+  height: 32px;
+  width: 100px;
+}
+.divi-group .img-oper button:focus{
+  background-color:#fff;
+  outline:none;
+}
+.divi-group .img-oper .btn-primary:focus{
+  background-color: #3071a9;
+  border-color: #285e8e;
+}
+.divi-group .select-all-box #select-all{
+  cursor: pointer;
+}
+/*对图片进行批量操作-----end*/
+.group {
+  padding: 0px 0px 20px 0px;
+  list-style: none;
+}
+.group .img-item {
+  padding:20px 8px 0px 8px;
+  position: relative;
+}
+.group img {
+  width: 169px;
+  height: 169px;
+  border: 1px solid #e7e7eb;
+}
+.group .check-cont {
+  padding: 2px 8px;
+  width: 169px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  border-left: 1px solid #e7e7eb;
+  border-right: 1px solid #e7e7eb;
+  border-bottom: 1px solid #e7e7eb;
+}
+.group input[type='checkbox'] {
+  float: left;
+  margin-top: 10px;
+  margin-right: 5px;
+  cursor:pointer;
+}
+.group label {
+  display: inline-block;
+  width: 130px;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor:pointer;
+}
+.group .img-item-ft {
+  width: 169px;
+  border-left: 1px solid #e7e7eb;
+  border-right: 1px solid #e7e7eb;
+  border-bottom: 1px solid #e7e7eb;
+}
+.group .img-item-ft .img-oper-list {
+  list-style: none;
+}
+.group .img-item-ft .img-oper-item {
+  position: relative;
+  padding: 0px;
+  background-color: #f4f5f9;
+}
+.group .img-item-ft .img-oper-item a {
+  display: block;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  vertical-align: middle;
+  color: #b2b2b2;
+  text-decoration: none;
+}
+.group .img-item-ft .img-oper-item a:hover {
+  color: #555556;
+  text-decoration: none;
+}
+.group .img-item-ft .tool-area {
+  display: none;
+}
+.group .img-item-ft .tool-tip {
+  position: absolute;
+  display: block;
+  top: -27px;
+  left: -5px;
+  width: 120%;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: #555556;
+}
+.group .img-item-ft .tool-tri {
+  position: absolute;
+  border-color: #555556 transparent transparent transparent;
+  border-style: solid dashed dashed dashed;
+  border-width: 5px;
+  top: -7px;
+  left: 22px;
+}
+/*翻页查看图片栏-----start*/
+.page-wrap {
+  display: none;
+  width:100%;
+  padding: 20px 0;
+  margin-right: -95px;
+}
+.page-nav {
+  float: right;
+  position: relative;
+}
+.page-nav span {
+  display: inline-block;
+  float: right;
+  height: 34px;
+  line-height: 34px;
+  font-size: 16px;
+  margin-right: 3px;
+}
+.page-nav button {
+  position: relative;
+  float: right;
+  width: 20px;
+  height: 34px;
+}
+.page-nav .next{
+  margin-left:10px;
+}
+.page-nav .next:active{
+  background-color: #fff;
+  outline: none;
+}
+.page-nav .next:focus{
+  background-color: #fff;
+  outline: none;
+}
+.page-nav .prev{
+  margin-right:10px;
+}
+.page-nav .prev:active{
+  background-color: #fff;
+  outline: none;
+}
+.page-nav .prev:focus{
+  background-color: #fff;
+  outline: none;
+}
+/*翻页查看图片栏-----end*/
+
+/*上下翻页的三角形-----start*/
+.page-nav .next-tri {
+  position: absolute;
+  border-color: transparent transparent transparent #919191;
+  border-style: dashed dashed dashed solid;
+  border-width: 7px;
+  top: 10px;
+  left: 10px;
+}
+.page-nav .prev-tri {
+  position: absolute;
+  border-color: transparent #919191 transparent transparent;
+  border-style: dashed solid dashed dashed;
+  border-width: 7px;
+  top: 10px;
+  left: 1px;
+}
+/*上下翻页的三角形-----end*/
+.page-go {
+  float: right;
+  padding-left: 0px;
+  margin-right: -20px;
+  width:135px;
+}
+.page-go .form-control  {
+  width: 50px;
+  text-align: center;
+}
+.page-go .jump-page:active{
+  background-color: #fff;
+  outline: none;
+}
+.page-go .jump-page:focus{
+  background-color: #fff;
+  outline: none;
+}
+/*版面右侧，显示各组的名称与各组的数量-----start*/
+.panel-side {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.panel-side li {
+  width: 100%;
+  border-radius: 0px;
+}
+.panel-side a {
+  width: 100%;
+  border-radius: 0px;
+  text-align: center;
+}
+.side-group-name{
+  display: inline-block;
+  width: auto;
+  max-width: 90px;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.side-group-count{
+  display: inline-block;
+  color: #ccc;
+  vertical-align: middle;
+  overflow: hidden;
+}
+/*版面右侧，显示各组的名称与各组的数量-----end*/
+/*新建分组按钮*/
+.add-new-group{
+  position: relative;
+}
+.add-new-group i{
+  display:inline-block;
+  padding-right:8px;
+}
+/*新建分组-----start*/
+.panel-side .add-group-tip{
+  position: absolute;
+  left: -60px;
+  top: 55px;
+  width:290px;
+  border:1px solid #e7e7eb;
+  border-radius: 5px;
+  background-color:#fff;
+  z-index: 10;
+}
+.panel-side .add-group-tip .inner-content{
+  padding:30px;
+}
+.panel-side .add-group-tip .ft{
+  margin-top:20px;
+}
+.panel-side .add-group-tip .out-tri{
+  position: absolute;
+  border-color: transparent transparent #e7e7eb transparent;
+  border-style: dashed dashed solid dashed;
+  border-width: 10px;
+  top: -19px;
+  left: 138px;
+  padding-right:0px;
+}
+.panel-side .add-group-tip .in-tri{
+  position: absolute;
+  border-color: transparent transparent #ffffff transparent;
+  border-style: dashed dashed solid dashed;
+  border-width: 10px;
+  top: -18px;
+  left: 138px;
+  padding-right:0px;
+}
+/*新建分组-----end*/
+
+/*当加载数据的时候显示提示-----start*/
+#loading-wrap{
+  display: block;
+  position: fixed;
+  left:0px;
+  top:0px;
+  width:100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.4;
+  z-index:999;
+}
+#loading-img{
+  display: block;
+  position: fixed;
+  width: 33px;
+  height: 39px;
+  background-image: url('../img/loading.gif');
+  background-repeat: no-repeat;
+  background-position: -134px -80px;
+  margin: 0 auto;
+  top:50%;
+  left:50%;
+  z-index:1000;
+}
+#loading-tip{
+  display: block;
+  position: fixed;
+  left: 37%;
+  top: 51%;
+  color: #000;
+  z-index: 1000;
+  font-size: 16px;
+  cursor:default;
+}
+/*当加载数据的时候显示提示-----end*/
+
+/*对操作的提示，成功或者错误*/
+.warning-tip{
+  position: fixed;
+  top:0px;
+  width:340px;
+  height: 35px;
+  font-size:14px;
+  line-height: 35px;
+  color:#fff;
+  text-align: center;
+  background-color: rgb(234,160,0);
+}
+.success-tip{
+  position: fixed;
+  top:0px;
+  width:340px;
+  height: 35px;
+  font-size:14px;
+  line-height: 35px;
+  color:#fff;
+  text-align: center;
+  background-color: rgb(66,139,202);
+}

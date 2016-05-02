@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <title>米讯</title>
+    
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../style/index.css">
+    <link rel="stylesheet" type="text/css" href="../style/imgDeposity.css">
+    <link rel="stylesheet" type="text/css" href="../style/handleImgDialog.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+      <div id = "mask"></div>
+      <div id = "wrap" class = "container-fluid">
+        <div class = "container-fluid" id = "header">
+          <nav class="navbar container navbar-defined" role="navigation">
+            <div class = "navbar-header container">
+              <div class = "navbar-brand">
+                <a class="navbar-brand brand"  href="#" id="logo">
+                  <img src="../img/logo.png" class = "img-logo">
+                  <h3 >米讯平台管理系统</h3>
+                  <span class="label label-default label-defined">BETA
+                  </span>
+                </a>
+              </div>
+              <div class = "customer-info">
+                <img src="../img/demo.png" class = "customer-img">
+                <div class = "type">
+                  <a href="#" class = "type-name label">服务号</a>
+                  <a href="#" class = "type-verify label">未认证</a>
+                </div>
+                <a href="" class = "customer-name label">疯掉了丰厚的开</a>
+                <a href="#" class = "info-inbox">
+                  <i class = "icon-inbox"></i>
+                  <i class = "icon-notices"></i>
+                </a>
+                <div class = "exit-box">
+                  <span>|</span>
+                  <a href="#" class = "btn btn-exit">退出</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class = " container main-defined" id ="main">
+          <div class ="col-md-2 clearfix" id ="nav_tab">
+            <ul class = "nav nav-stacked nav-pills" role = "tablist">
+              <li role = "presentation">
+                <i class="glyphicon glyphicon-th-large" ></i><span>功能</span>
+              </li>
+              <li role = "presentation" >
+                <a href="index.html">群发消息</a> 
+              </li>
+              <li role = "presentation">
+                <a href="#">自动回复</a>
+              </li>
+              <li role = "presentation">
+                <a href="#">自定义菜单</a>
+              </li>
+            </ul>
+            <ul class = "nav nav-stacked nav-pills" role = "tablist">
+              <li role = "presentation">
+                <i class="glyphicon glyphicon-book" style = "margin:10px;" ></i><span>管理</span>
+              </li>
+              <li role = "presentation">
+                <a href="#">消息管理</a> 
+              </li>
+              <li role = "presentation">
+                <a href="#">用户管理</a>
+              </li>
+              <li role = "presentation" class = "active">
+                <a href="source.html">素材管理</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-main col-md-10">
+            <div id="main-title">
+          <h4 class="title">素材管理</h4>
+          <ul class="title-nav nav nav-pills">
+            <li>
+              <a href="source.html">图文消息</a>
+            </li>
+            <li class="active">
+              <a href="#">图片库</a>
+            </li>
+          </ul>
+            </div>
+            <div id="main-bd">
+              <div class="img-panel row">
+                <div class="panel-main col-md-10">
+                  <div class="panel-main-top row">
+                    <div class="group-oper col-md-4">
+                      <span class="group-name">未分组</span>
+                      <!--<a href="javascript:void(0);" class="rename-group">重命名分组</a>
+                      <a href="javascript:void(0);" class="del oper-tip-group">删除分组</a>-->
+                    </div>
+                    <div class="upload-tip col-md-6">
+                      大小: 不超过2M,    格式: bmp, png, jpeg, jpg, gif
+                      <i class="out-tri"></i>
+                      <i class="in-tri"></i>
+                    </div>
+                    <div class="upload col-md-2">
+                      <button class="btn btn-primary upload-img">上传</button>
+                    </div>
+                  </div>
+                  <div class="divi-group row">
+                    <div class="select-all-box form-inline col-md-2" role="form">
+                      <div class="form-group">
+                        <input id="select-all" type="checkbox">
+                        <label for="select-all">全选</label>
+                      </div>
+                    </div>
+                    <div class="img-oper col-md-6">
+                      <button class="btn btn-default move-img" data-dialogFlag='1'>移动分组</button>
+                      <button class="btn btn-default del-img" data-dialogFlag='1'>删除</button>
+                    </div>
+                  </div>
+                  <ul class="group row">
+                    <li class="img-item col-md-3">
+                      <div class="img-item-bd">
+                        <img src="../img/more.png" alt="">
+                        <div class="check-cont">
+                          <input id="item1" type="checkbox" class="img-checkbox" name="selectd">
+                          <label for="item1" class="img-name">
+                            图片的名字哈哈哈哈.png
+                          </label>
+                        </div>
+                      </div>
+                      <div class="img-item-ft">
+                        <ul class="img-oper-list row">
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="edit oper-tip glyphicon glyphicon-pencil" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">编辑分组</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="move oper-tip glyphicon glyphicon-move" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">移动分组</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="del oper-tip glyphicon glyphicon-trash" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">删除</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="img-item col-md-3">
+                      <div class="img-item-bd">
+                        <img src="../img/more.png" alt="">
+                        <div class="check-cont">
+                          <input id="item2" type="checkbox" class="img-checkbox" name="selectd">
+                          <label for="item2" class="img-name">
+                            图片的名字哈哈哈哈.png
+                          </label>
+                        </div>
+                      </div>
+                      <div class="img-item-ft">
+                        <ul class="img-oper-list row">
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="edit oper-tip glyphicon glyphicon-pencil" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">编辑分组</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="move oper-tip glyphicon glyphicon-move" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">移动分组</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="del oper-tip glyphicon glyphicon-trash" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">删除</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="img-item col-md-3">
+                      <div class="img-item-bd">
+                        <img src="../img/more.png" alt="">
+                        <div class="check-cont">
+                          <input id="item3" type="checkbox" class="img-checkbox" name="selectd">
+                          <label for="item3" class="img-name">
+                            图片的名字哈哈哈哈.png
+                          </label>
+                        </div>
+                      </div>
+                      <div class="img-item-ft">
+                        <ul class="img-oper-list row">
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="edit oper-tip glyphicon glyphicon-pencil" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">编辑分组</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="move oper-tip glyphicon glyphicon-move" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">移动分组</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="del oper-tip glyphicon glyphicon-trash" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">删除</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="img-item col-md-3">
+                      <div class="img-item-bd">
+                        <img src="../img/more.png" alt="">
+                        <div class="check-cont">
+                          <input id="item4" type="checkbox" class="img-checkbox" name="selectd">
+                          <label for="item4" class="img-name">
+                            图片的名字哈哈哈哈.png
+                          </label>
+                        </div>
+                      </div>
+                      <div class="img-item-ft">
+                        <ul class="img-oper-list row">
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="edit oper-tip glyphicon glyphicon-pencil" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">编辑分组</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="move oper-tip glyphicon glyphicon-move" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">移动分组</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="del oper-tip glyphicon glyphicon-trash" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">删除</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="img-item col-md-3">
+                      <div class="img-item-bd">
+                        <img src="../img/more.png" alt="">
+                        <div class="check-cont">
+                          <input id="item5" type="checkbox" class="img-checkbox" name="selectd">
+                          <label for="item5" class="img-name">
+                            图片的名字哈哈哈哈.png
+                          </label>
+                        </div>
+                      </div>
+                      <div class="img-item-ft">
+                        <ul class="img-oper-list row">
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="edit oper-tip glyphicon glyphicon-pencil" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">编辑分组</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="move oper-tip glyphicon glyphicon-move" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">移动分组</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="del oper-tip glyphicon glyphicon-trash" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">删除</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="img-item col-md-3">
+                      <div class="img-item-bd">
+                        <img src="../img/more.png" alt="">
+                        <div class="check-cont">
+                          <input id="item6" type="checkbox" class="img-checkbox" name="selectd">
+                          <label for="item6" class="img-name">
+                            图片的名字哈哈哈哈.png
+                          </label>
+                        </div>
+                      </div>
+                      <div class="img-item-ft">
+                        <ul class="img-oper-list row">
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="edit oper-tip glyphicon glyphicon-pencil" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">编辑分组</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="move oper-tip glyphicon glyphicon-move" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">移动分组</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="del oper-tip glyphicon glyphicon-trash" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">删除</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="img-item col-md-3">
+                      <div class="img-item-bd">
+                        <img src="../img/more.png" alt="">
+                        <div class="check-cont">
+                          <input id="item7" type="checkbox" class="img-checkbox" name="selectd">
+                          <label for="item7" class="img-name">
+                            图片的名字哈哈哈哈.png
+                          </label>
+                        </div>
+                      </div>
+                      <div class="img-item-ft">
+                        <ul class="img-oper-list row">
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="edit oper-tip glyphicon glyphicon-pencil" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">编辑分组</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="move oper-tip glyphicon glyphicon-move" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">移动分组</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="del oper-tip glyphicon glyphicon-trash" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">删除</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="img-item col-md-3">
+                      <div class="img-item-bd">
+                        <img src="../img/more.png" alt="">
+                        <div class="check-cont">
+                          <input id="item8" type="checkbox" class="img-checkbox" name="selectd">
+                          <label for="item8" class="img-name">
+                            图片的名字哈哈哈哈.png
+                          </label>
+                        </div>
+                      </div>
+                      <div class="img-item-ft">
+                        <ul class="img-oper-list row">
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="edit oper-tip glyphicon glyphicon-pencil" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">编辑分组</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="move oper-tip glyphicon glyphicon-move" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">移动分组</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="del oper-tip glyphicon glyphicon-trash" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">删除</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="img-item col-md-3">
+                      <div class="img-item-bd">
+                        <img src="../img/more.png" alt="">
+                        <div class="check-cont">
+                          <input id="item9" type="checkbox" class="img-checkbox" name="selectd">
+                          <label for="item9" class="img-name">
+                            图片的名字哈哈哈哈.png
+                          </label>
+                        </div>
+                      </div>
+                      <div class="img-item-ft">
+                        <ul class="img-oper-list row">
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="edit oper-tip glyphicon glyphicon-pencil" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">编辑分组</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="move oper-tip glyphicon glyphicon-move" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">移动分组</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="del oper-tip glyphicon glyphicon-trash" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">删除</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="img-item col-md-3">
+                      <div class="img-item-bd">
+                        <img src="../img/more.png" alt="">
+                        <div class="check-cont">
+                          <input id="item10" type="checkbox" class="img-checkbox" name="selectd">
+                          <label for="item10" class="img-name">
+                            图片的名字哈哈哈哈.png
+                          </label>
+                        </div>
+                      </div>
+                      <div class="img-item-ft">
+                        <ul class="img-oper-list row">
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="edit oper-tip glyphicon glyphicon-pencil" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">编辑分组</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="move oper-tip glyphicon glyphicon-move" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">移动分组</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="del oper-tip glyphicon glyphicon-trash" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">删除</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="img-item col-md-3">
+                      <div class="img-item-bd">
+                        <img src="../img/more.png" alt="">
+                        <div class="check-cont">
+                          <input id="item11" type="checkbox" class="img-checkbox" name="selectd">
+                          <label for="item11" class="img-name">
+                            图片的名字哈哈哈哈.png
+                          </label>
+                        </div>
+                      </div>
+                      <div class="img-item-ft">
+                        <ul class="img-oper-list row">
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="edit oper-tip glyphicon glyphicon-pencil" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">编辑分组</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="move oper-tip glyphicon glyphicon-move" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">移动分组</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="del oper-tip glyphicon glyphicon-trash" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">删除</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="img-item col-md-3">
+                      <div class="img-item-bd">
+                        <img src="../img/more.png" alt="">
+                        <div class="check-cont">
+                          <input id="item12" type="checkbox" class="img-checkbox" name="selectd">
+                          <label for="item12" class="img-name">
+                            图片的名字哈哈哈哈.png
+                          </label>
+                        </div>
+                      </div>
+                      <div class="img-item-ft">
+                        <ul class="img-oper-list row">
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="edit oper-tip glyphicon glyphicon-pencil" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">编辑分组</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="move oper-tip glyphicon glyphicon-move" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">移动分组</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                          <li class="img-oper-item col-md-4">
+                            <a href="javascript:void(0);" class="del oper-tip glyphicon glyphicon-trash" data-dialogFlag='1'>
+                            </a>
+                            <div class="tool-area">
+                              <span class="tool-tip">删除</span>
+                              <span class="tool-tri"></span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="page-wrap row">
+                    <div class="page-nav col-md-2 col-md-offset-7">
+                      <button class="btn btn-default next">
+                        <i class="next-tri"></i>
+                      </button>
+                      <span class="sum">2</span>
+                      <span>/</span>
+                      <span class="now">1</span>
+                      <button class="btn btn-default prev">
+                        <i class="prev-tri"></i>
+                      </button>
+                    </div>
+                    <div class="page-go form-inline col-md-3" role="form">
+                      <div class="form-group">
+                        <input type="text" class="form-control" style="width:50px;">
+                        <button class="btn btn-default">跳转</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel-side col-md-2">
+                  <ul class="nav nav-list nav-pills nav-stacked">
+                    <li class="active"><a href="javascript:void(0);">未分组</a></li>
+                    <li><a href="imgDeposityGroup.html">分组2</a></li>
+                    <li><a href="javascript:void(0);">分组3</a></li>
+                    <li><a href="javascript:void(0);">分组2</a></li>
+                    <li>
+                    <a class='add-new-group' href="javascript:void(0);" data-dialogFlag='1'>
+                      <i class="glyphicon glyphicon-plus" data-dialogFlag='1'>
+                      </i>新建分组
+                      <!-- <div class="add-group-tip">
+                        <div class="inner-content">
+                          <div class="bd">
+                            <p>新建分组</p>
+                            <form role="form">
+                              <div class="form-group">
+                                <input type="text" class="form-control">
+                              </div>
+                            </form>
+                          </div>
+                          <div class="ft row">
+                            <button class="ok btn btn-primary col-md-5 col-md-offset-1">确定</button>
+                            <button class="cancel btn btn-default col-md-5 col-md-offset-1">取消</button>
+                          </div>
+                          <i class="out-tri"></i>
+                          <i class="in-tri"></i>
+                        </div>
+                      </div> -->
+                    </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class = "row" id ="footer"></div>
+      </div>
+      <div class="radio">
+      <label for="haha"><input type="radio" id='haha' name='hahah'>测试</label></div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src = "../script/imgDeposity.js"></script>
+    <script type="text/javascript" src="../script/imgDeposity_addImgOperTab.js"></script>
+    <script type="text/javascript" src="../script/imgDeposity_addGroupOperTab.js"></script>
+  </body>
+</html>

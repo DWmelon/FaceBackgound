@@ -1,0 +1,208 @@
+/*对图片要进行处理的提示*/
+/*编辑图片的的名字-----start*/
+.img-item .edit-tip{
+  position: absolute;
+  width:290px;
+  left:-110px;
+  top:264px;
+  border:1px solid #e7e7eb;
+  border-radius: 5px;
+  background-color:#fff;
+  z-index:5;
+}
+.img-item .edit-tip .out-tri{
+  position: absolute;
+  border-color: transparent transparent #e7e7eb transparent;
+  border-style: dashed dashed dashed solid;
+  border-width: 8px;
+  top: -16px;
+  left: 134px;
+}
+.img-item .edit-tip .in-tri{
+  position: absolute;
+  border-color: transparent transparent #ffffff transparent;
+  border-style: dashed dashed dashed solid;
+  border-width: 8px;
+  top: -15px;
+  right: 138px;
+}
+.img-item .edit-tip .inner-content{
+  padding:30px;
+}
+.img-item .edit-tip .inner-content .bd{
+  
+}
+.img-item .edit-tip .inner-content .ft{
+  margin-top:20px;
+  
+}
+/*编辑图片的的名字-----end*/
+/*移动图片-----start*/
+.img-item .move-tip{
+  position: absolute;
+  width:290px;
+  left:-51px;
+  top:264px;
+  border:1px solid #e7e7eb;
+  border-radius: 5px;
+  background-color:#fff;
+  z-index:5;
+}
+.img-item .move-tip .out-tri{
+  position: absolute;
+  border-color: transparent transparent #e7e7eb transparent;
+  border-style: dashed dashed dashed solid;
+  border-width: 8px;
+  top: -16px;
+  left: 134px;
+}
+.img-item .move-tip .in-tri{
+  position: absolute;
+  border-color: transparent transparent #ffffff transparent;
+  border-style: dashed dashed dashed solid;
+  border-width: 8px;
+  top: -15px;
+  right: 138px;
+}
+.img-item .move-tip .inner-content{
+  padding:30px;
+}
+.img-item .move-tip .inner-content .bd{
+  
+}
+.img-item .move-tip .radio{
+  overflow:hidden;
+}
+.img-item .move-tip .radio label{
+  margin-left:0px;
+  padding-top:5px;
+  width:50%;
+  font-size:14px;
+}
+.img-item .move-tip .inner-content .ft{
+  margin-top:20px;
+}
+/*移动图片-----end*/
+
+/*删除图片-----start*/
+.img-item .del-tip{
+  position: absolute;
+  width:290px;
+  left:1px;
+  top:264px;
+  border:1px solid #e7e7eb;
+  border-radius: 5px;
+  background-color:#fff;
+  z-index:5;
+}
+.img-item .del-tip .out-tri{
+  position: absolute;
+  border-color: transparent transparent #e7e7eb transparent;
+  border-style: dashed dashed dashed solid;
+  border-width: 8px;
+  top: -16px;
+  left: 134px;
+}
+.img-item .del-tip .in-tri{
+  position: absolute;
+  border-color: transparent transparent #ffffff transparent;
+  border-style: dashed dashed dashed solid;
+  border-width: 8px;
+  top: -15px;
+  right: 138px;
+}
+.img-item .del-tip .inner-content{
+  padding:30px;
+}
+.img-item .del-tip .inner-content .bd{
+  
+}
+.img-item .del-tip .inner-content .ft{
+  margin-top:20px;
+}
+/*删除图片-----start*/
+
+/*批量移动-----start*/
+.img-oper .move-tip{
+  position: absolute;
+  width:290px;
+  left: -75px;
+  top: 40px;
+  border:1px solid #e7e7eb;
+  border-radius: 5px;
+  background-color:#fff;
+  z-index:5;
+}
+.img-oper .move-tip .out-tri{
+  position: absolute;
+  border-color: transparent transparent #e7e7eb transparent;
+  border-style: dashed dashed dashed solid;
+  border-width: 8px;
+  top: -16px;
+  left: 134px;
+}
+.img-oper .move-tip .in-tri{
+  position: absolute;
+  border-color: transparent transparent #ffffff transparent;
+  border-style: dashed dashed dashed solid;
+  border-width: 8px;
+  top: -15px;
+  right: 138px;
+}
+.img-oper .move-tip .inner-content{
+  padding:30px;
+}
+.img-oper .move-tip .inner-content .bd{
+  
+}
+.img-oper .move-tip .radio{
+  overflow:hidden;
+}
+.img-oper .move-tip .radio label{
+  margin-left:0px;
+  padding-top:5px;
+  width:50%;
+  font-size:14px;
+}
+.img-oper .move-tip .inner-content .ft{
+  margin-top:20px;
+}
+/*批量移动-----end*/
+
+/*批量删除-----start*/
+.img-oper .del-tip{
+  position: absolute;
+  width:290px;
+  left:25px;
+  top:40px;
+  border:1px solid #e7e7eb;
+  border-radius: 5px;
+  background-color:#fff;
+  z-index:5;
+}
+.img-oper .del-tip .out-tri{
+  position: absolute;
+  border-color: transparent transparent #e7e7eb transparent;
+  border-style: dashed dashed dashed solid;
+  border-width: 8px;
+  top: -16px;
+  left: 134px;
+}
+.img-oper .del-tip .in-tri{
+  position: absolute;
+  border-color: transparent transparent #ffffff transparent;
+  border-style: dashed dashed dashed solid;
+  border-width: 8px;
+  top: -15px;
+  right: 138px;
+}
+.img-oper .del-tip .inner-content{
+  padding:30px;
+}
+.img-oper .del-tip .inner-content .bd{
+  
+}
+.img-oper .del-tip .inner-content .ft{
+  margin-top:20px;
+}
+/*批量删除-----end*/

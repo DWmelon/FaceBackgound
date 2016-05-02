@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+	<script src='html/js/jquery-1.11.1.min.js'></script>
+	<script src='html/js/json2.js'></script>
+	<script>
+		//var param= {"groupName":"testGroup","userId":1111};
+		//var _url = 'http://localhost:8080/MesClouds/groupImage';
+		/*var arr = {"imgIdArr":["1","2","3"]};
+		var post={data:JSON.stringify(arr)};
+		//var post2 = {data:"{"imgIdArr":["1","2","3"]}"};
+		//console.log(post2);
+		console.log(post);
+		//var param={"imgidar":arr};
+		var _url = 'http://localhost:8080/MesClouds/InsertMaterial';
+			$.post(_url,post,
+			function(data){
+				console.log(data);
+			});*/
+			//var url = 'http://localhost:8080/MesClouds/TestResponse';
+			//$.get(url,function(data){
+			//	console.log(data);
+			//	var jsondata = $.parseJSON(data);
+			//	console.log(jsondata.result);
+			//});
+			
+			//var arr = {"imgIdArr":imgId,"newGroupId":destGroupId.toString(),"oldGroupId":srcGroupId.toString(),"userId":"1111"};
+			
+			var material = {
+			"material":{
+				"summary":"= = ！！！！",
+				"id":67,
+				"publishTime":"2015-02-06 15:07:23",
+				"userId":1111,
+				"isMulti":0,
+				"materialBody":[
+					{
+					 "imgUrl":"http://localhost:8080/MesClouds/resource/20150203043926837.jpg",
+					 "author":"哇哈哈 ！！！",
+					 "title":"- - ！！！",
+					 "mainContent":"- - ！！！<\/p>",
+					 "url":"http://www.baidu.com",
+					 "isShow":1
+					}
+							]
+					}		
+			};
+			var param = {data:JSON.stringify(material)};
+			console.log('转化前');
+			console.log(material);
+			console.log('转化后');
+			console.log(param);
+			var url = "http://localhost:8080/MesClouds/UpdateMaterial";
+			$.post(url,param,function(data){
+				data = $.parseJSON(data);
+				console.log(data);
+			});
+			//console.log(material);
+			
+			//测试接收素材的接口-----start
+			/*var url = "http://localhost:8080/MesClouds/QueryMaterialByGroup";
+			var param = {"userId":"2"};
+			$.post(url,param,function(data){
+				data = $.parseJSON(data);
+				console.log(data);
+			});*/
+		</script>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>测试</title>
+</head>
+<body>
+	
+	<input type="text" id="test1" name="test1" value="test123"/>
+	
+	<input type = "button" id = "button">
+	
+<script type="text/javascript">
+	
+	document.getElementById("button").onclick = function(){
+		alert(cursorPosition(document.getElementById("test1")));
+	}
+
+	function cursorPosition(txb){
+		alert(txb.selectionStart);
+	}
+
+
+</script>
+
+</body>
+</html>
